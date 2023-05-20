@@ -13,10 +13,11 @@ public class PrimeiraClasse {
     @Test
     public void testeAberturaNavegador(){
       System.setProperty("webdriver.chrome.driver", "C:\\WebDriver\\chromedriver.exe");
-      WebDriver drive = new ChromeDriver();
-     drive.get("https://www.qaacademy.com.br");
-      //driver.findElement(By.xpath(cursosOnlineBotao)).click();
-      //driver.findElement(By.id(cursosPresenciaisBotao)).click();
+      WebDriver driver = new ChromeDriver();
+     driver.get("https://www.qaacademy.com.br");
+      driver.findElement(By.xpath(cursosOnlineBotao)).click();
+      driver.findElement(By.id(cursosPresenciaisBotao)).click();
+      
 
     }
 }
