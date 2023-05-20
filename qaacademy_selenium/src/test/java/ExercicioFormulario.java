@@ -18,6 +18,14 @@ public class ExercicioFormulario {
     String countryString = "//*[@id='basicBootstrapForm']/div[10]/div/span/span[1]/span/span[2]";
     String selectCountryString = "/html/body/span/span/span[1]/input";
     String nameCountryString = "//*[@id='select2-country-results']/li";
+    String yearString = "//*[@id='yearbox']";
+    String selectYeaString = "//*[@id='yearbox']/option[6]";
+    String month = "//*[@id='basicBootstrapForm']/div[11]/div[2]/select";
+    String selectMonth = "//*[@id='basicBootstrapForm']/div[11]/div[2]/select/option[8]";
+    String day = "//*[@id='daybox']/option[11]";
+    String firstPassword = "//*[@id='firstpassword']";
+    String repeatPassword = "//*[@id='secondpassword']";
+
 
     @Test
     public void testeAcessoNavegador()throws InterruptedException{
@@ -44,6 +52,13 @@ public class ExercicioFormulario {
       Thread.sleep(5000);
       driver.findElement(By.xpath(selectCountryString)).sendKeys("Australia");
       driver.findElement(By.xpath(nameCountryString)).click();
+      driver.findElement(By.xpath(yearString)).click();
+      driver.findElement(By.xpath(selectYeaString)).click();
+      driver.findElement(By.xpath(month)).click();
+      driver.findElement(By.xpath(selectMonth)).click();
+      driver.findElement(By.xpath(day)).click();
+      driver.findElement(By.xpath(firstPassword)).sendKeys("Teste@23");
+      driver.findElement(By.xpath(repeatPassword)).sendKeys("Teste@23");
       
 
 
